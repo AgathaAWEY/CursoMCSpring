@@ -1,4 +1,4 @@
-package com.agathamelo.cursomc.resources.exception;
+package com.awey.cursomc.resources.exception;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.agathamelo.cursomc.services.exceptions.ObjectNotFoundException;
+import com.awey.cursomc.services.exceptions.ObjectNotFoundException;
 
 /**
  * The class ResourceExceptionHandler

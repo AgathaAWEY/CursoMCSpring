@@ -1,7 +1,4 @@
-package com.agathamelo.cursomc.resources;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.awey.cursomc.resources;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.agathamelo.cursomc.domain.Categoria;
-import com.agathamelo.cursomc.services.CategoriaService;
+import com.awey.cursomc.domain.Categoria;
+import com.awey.cursomc.services.CategoriaService;
 
 
 /**

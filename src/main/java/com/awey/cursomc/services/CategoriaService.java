@@ -1,11 +1,11 @@
-package com.agathamelo.cursomc.services;
+package com.awey.cursomc.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.agathamelo.cursomc.domain.Categoria;
-import com.agathamelo.cursomc.repositories.CategoriaRepository;
-import com.agathamelo.cursomc.services.exceptions.ObjectNotFoundException;
+import com.awey.cursomc.domain.Categoria;
+import com.awey.cursomc.repositories.CategoriaRepository;
+import com.awey.cursomc.services.exceptions.ObjectNotFoundException;
 
 /**
  * The Categoria Service class

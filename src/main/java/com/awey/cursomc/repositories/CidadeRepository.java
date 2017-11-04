@@ -1,18 +1,18 @@
-package com.agathamelo.cursomc.repositories;
+package com.awey.cursomc.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.agathamelo.cursomc.domain.Produto;
+import com.awey.cursomc.domain.Cidade;
  
 /** 
  * Categoria Interface Repository 
- * Camada de acesso a dados Produto 
+ * Camada de acesso a dados Cidade 
  * (Repository or DAO)
  **/
 
 @Repository
-public interface ProdutoRepository extends JpaRepository<Produto, Integer>{
+public interface CidadeRepository extends JpaRepository<Cidade, Integer>{
 
 	
 	

@@ -38,7 +38,6 @@ public class CategoriaResource {
 		
 		// acessar o servico para fazer a pesquisa
 		Categoria foundCategoria = service.buscar(id);
-		
 		return ResponseEntity.ok().body(foundCategoria);
 	}
 	

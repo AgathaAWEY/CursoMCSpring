@@ -3,11 +3,15 @@ package com.agathamelo.cursomc.resources;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.agathamelo.cursomc.domain.Categoria;
+import com.agathamelo.cursomc.services.CategoriaService;
 
 
 /**
@@ -16,23 +20,26 @@ import com.agathamelo.cursomc.domain.Categoria;
  *
  */
 
+/**
+ * Controlador Rest Resource
+ * @author Agatha Santos Silva
+ *
+ */
 @RestController
 @RequestMapping(value = "/categorias")
 public class CategoriaResource {
 
+	@Autowired
+	private CategoriaService service;
 	
-	@RequestMapping(method=RequestMethod.GET)
-	public List<Categoria> listar() {
+	/**O endpoint desse metodo recebe um id */
+	@RequestMapping(value="/{id}", method=RequestMethod.GET)
+	public ResponseEntity<?> find(@PathVariable Integer id) {
 		
-		Categoria catInformatica = new Categoria(1, "Informatica");
-		Categoria catEscritorio = new Categoria(2, "Escritorio");
+		// acessar o servico para fazer a pesquisa
+		Categoria foundCategoria = service.buscar(id);
 		
-		List<Categoria> categorias = new ArrayList<>();
-		
-		categorias.add(catInformatica);
-		categorias.add(catEscritorio);
-		
-		return categorias;
+		return ResponseEntity.ok().body(foundCategoria);
 	}
 	
 }
